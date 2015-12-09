@@ -8,12 +8,12 @@ except ImportError:
     from distutils.core import setup
 
 # Don't import segment-python module here, since deps may not be installed
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'analytics'))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'segment/analytics'))
 from version import VERSION
 
 long_description = '''
-Segment is the simplest way to integrate analytics into your application.
-One API allows you to turn on any other analytics service. No more learning
+Segment is the simplest way to integrate segment analytics into your application.
+One API allows you to turn on any other segment analytics service. No more learning
 new APIs, repeated code, and wasted development time.
 
 This is the official python client that wraps the Segment REST API (https://segment.com).
@@ -29,14 +29,14 @@ setup(
     author_email='friends@segment.com',
     maintainer='Segment',
     maintainer_email='friends@segment.com',
-    test_suite='analytics.test.all',
-    packages=['analytics', 'analytics.test'],
+    test_suite='segment.analytics.test.all',
+    packages=['segment.analytics', 'segment.analytics.test'],
     license='MIT License',
     install_requires=[
         'python-dateutil',
         'requests',
         'six'
     ],
-    description='The hassle-free way to integrate analytics into any python application.',
+    description='The hassle-free way to integrate segment analytics into any python application.',
     long_description=long_description
 )

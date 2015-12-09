@@ -1,8 +1,8 @@
 from threading import Thread
 import logging
 
-from analytics.version import VERSION
-from analytics.request import post
+from segment.analytics.version import VERSION
+from segment.analytics.request import post
 
 
 class Consumer(Thread):

@@ -1,3 +1,7 @@
+1.1.0-stem / 2015-12-09
+==================
+
+  * change directory structure -> segment.analytics
 
 1.1.0 / 2015-06-23
 ==================
