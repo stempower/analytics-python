@@ -53,7 +53,7 @@ class TestClient(unittest.TestCase):
         self.assertEqual(msg['event'], 'python test event')
         self.assertEqual(msg['anonymousId'], 'anonymousId')
         self.assertEqual(msg['context']['library'], {
-            'name': 'analytics-python',
+            'name': 'segment-python',
             'version': VERSION
         })
         self.assertTrue(isinstance(msg['messageId'], str))
@@ -87,7 +87,7 @@ class TestClient(unittest.TestCase):
         self.assertEqual(msg['traits'], { 'trait': 'value' })
         self.assertEqual(msg['anonymousId'], 'anonymousId')
         self.assertEqual(msg['context']['library'], {
-            'name': 'analytics-python',
+            'name': 'segment-python',
             'version': VERSION
         })
         self.assertTrue(isinstance(msg['timestamp'], str))
@@ -120,7 +120,7 @@ class TestClient(unittest.TestCase):
         self.assertEqual(msg['traits'], { 'trait': 'value' })
         self.assertEqual(msg['anonymousId'], 'anonymousId')
         self.assertEqual(msg['context']['library'], {
-            'name': 'analytics-python',
+            'name': 'segment-python',
             'version': VERSION
         })
         self.assertTrue(isinstance(msg['timestamp'], str))
@@ -162,7 +162,7 @@ class TestClient(unittest.TestCase):
         self.assertEqual(msg['properties'], { 'property': 'value' })
         self.assertEqual(msg['anonymousId'], 'anonymousId')
         self.assertEqual(msg['context']['library'], {
-            'name': 'analytics-python',
+            'name': 'segment-python',
             'version': VERSION
         })
         self.assertEqual(msg['category'], 'category')
@@ -196,7 +196,7 @@ class TestClient(unittest.TestCase):
         self.assertEqual(msg['properties'], { 'property': 'value' })
         self.assertEqual(msg['anonymousId'], 'anonymousId')
         self.assertEqual(msg['context']['library'], {
-            'name': 'analytics-python',
+            'name': 'segment-python',
             'version': VERSION
         })
         self.assertTrue(isinstance(msg['timestamp'], str))

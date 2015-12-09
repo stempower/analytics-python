@@ -177,7 +177,7 @@ class Client(object):
         msg['timestamp'] = timestamp.isoformat()
         msg['messageId'] = str(uuid4())
         msg['context']['library'] = {
-            'name': 'analytics-python',
+            'name': 'segment-python',
             'version': VERSION
         }
 
@@ -185,7 +185,7 @@ class Client(object):
         self.log.debug('queueing: %s', msg)
 
         if self.queue.full():
-            self.log.warn('analytics-python queue is full')
+            self.log.warn('segment-python queue is full')
             return False, msg
 
         self.queue.put(msg)

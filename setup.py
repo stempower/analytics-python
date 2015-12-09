@@ -7,7 +7,7 @@ try:
 except ImportError:
     from distutils.core import setup
 
-# Don't import analytics-python module here, since deps may not be installed
+# Don't import segment-python module here, since deps may not be installed
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'analytics'))
 from version import VERSION
 
@@ -18,13 +18,13 @@ new APIs, repeated code, and wasted development time.
 
 This is the official python client that wraps the Segment REST API (https://segment.com).
 
-Documentation and more details at https://github.com/segmentio/analytics-python
+Documentation and more details at https://github.com/segmentio/segment-python
 '''
 
 setup(
-    name='analytics-python',
+    name='segment-python',
     version=VERSION,
-    url='https://github.com/segmentio/analytics-python',
+    url='https://github.com/segmentio/segment-python',
     author='Segment',
     author_email='friends@segment.com',
     maintainer='Segment',
