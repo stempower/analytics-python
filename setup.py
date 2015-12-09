@@ -8,8 +8,8 @@ except ImportError:
     from distutils.core import setup
 
 # Don't import segment-python module here, since deps may not be installed
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'segment/analytics'))
-from version import VERSION
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'segment'))
+from segment.analytics.version import VERSION
 
 long_description = '''
 Segment is the simplest way to integrate segment analytics into your application.
@@ -30,7 +30,7 @@ setup(
     maintainer='Segment',
     maintainer_email='friends@segment.com',
     test_suite='segment.analytics.test.all',
-    packages=['segment.analytics', 'segment.analytics.test'],
+    packages=['segment','segment.analytics', 'segment.analytics.test'],
     license='MIT License',
     install_requires=[
         'python-dateutil',
